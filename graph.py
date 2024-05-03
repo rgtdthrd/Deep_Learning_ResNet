@@ -15,19 +15,21 @@ if __name__ == "__main__":
             loss.append(float(each[2]))
             accuracy.append(float(each[4]))
 
-    print(accuracy)
-    print(loss)
+    #print(accuracy)
+    #print(loss)
 
     #plot a graph with accuracy
     plt.plot(accuracy)
     plt.xlabel("Epoch")
     plt.ylabel("Accuracy")
     plt.title("Accuracy")
-    plt.show()
-    
+    #plt.show()
+    #save the graph
+    plt.savefig("accuracy.png")
     plt.plot(loss)
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.title("Loss")
-    plt.show()
+    #plt.show()
+    plt.savefig("loss.png")
     
