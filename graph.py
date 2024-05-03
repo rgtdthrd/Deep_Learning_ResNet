@@ -8,10 +8,11 @@ if __name__ == "__main__":
     
     with open("out.txt") as f:
         while True:
-            line = f.readline()
-            if not line:
+            line1 = f.readline()
+            line2 = f.readline()
+            if not line1:
                 break
-            each = line.split()
+            each = line2.split()
             loss.append(float(each[2]))
             accuracy.append(float(each[4]))
 
@@ -23,13 +24,13 @@ if __name__ == "__main__":
     plt.xlabel("Epoch")
     plt.ylabel("Accuracy")
     plt.title("Accuracy")
-    #plt.show()
-    #save the graph
+    plt.show()
     plt.savefig("accuracy.png")
+    
     plt.plot(loss)
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.title("Loss")
-    #plt.show()
+    plt.show()
     plt.savefig("loss.png")
     
