@@ -24,13 +24,12 @@ if __name__ == "__main__":
     plt.xlabel("Epoch")
     plt.ylabel("Accuracy")
     plt.title("Accuracy")
-    plt.show()
     plt.savefig("accuracy.png")
-    
+    plt.show()
+
     plt.plot(loss)
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.title("Loss")
-    plt.show()
     plt.savefig("loss.png")
-    
+    plt.show()
